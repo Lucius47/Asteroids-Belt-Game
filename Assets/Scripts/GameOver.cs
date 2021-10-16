@@ -1,8 +1,8 @@
-﻿//using System.Collections;
-//using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+
+//Game Over UI
 
 public class GameOver : MonoBehaviour
 {
@@ -30,7 +30,7 @@ public class GameOver : MonoBehaviour
         }
 
 
-        //moe this to a separate script later.
+        //move this to a separate script later.
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             SceneManager.LoadScene(0);

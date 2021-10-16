@@ -1,7 +1,6 @@
-﻿//using System.Collections;
-//using System.Collections.Generic;
-//using Unity.Mathematics;
-using UnityEngine;
+﻿using UnityEngine;
+
+//Controls player ship movement and screen wrapping
 
 public class PlayerController : MonoBehaviour
 {

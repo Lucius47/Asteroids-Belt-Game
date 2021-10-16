@@ -1,6 +1,6 @@
-﻿//using System.Collections;
-//using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+
+//Sets difficulty
 
 public static class Difficulty
 {

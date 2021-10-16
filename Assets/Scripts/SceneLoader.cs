@@ -1,14 +1,11 @@
-﻿//using System;
-//using System.Collections;
-//using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-//using UnityEngine.UI;
+
+//Main Menu
 
 public class SceneLoader : MonoBehaviour
 {
-    GameOver gameOver;
     public Text highScore;
 
     private void Start()
@@ -16,8 +13,6 @@ public class SceneLoader : MonoBehaviour
         
         highScore.text = PlayerPrefs.GetInt("High Score").ToString();
     }
-
-
 
 
     void Update()

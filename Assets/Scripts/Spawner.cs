@@ -1,10 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+
+//Spawns asteroids
 
 public class Spawner : MonoBehaviour
 {
-    public GameObject fallingBlock;
+    public GameObject asteroid;
     
     Vector2 screenWidth;
     Vector2 spawnPosition;
@@ -31,15 +31,15 @@ public class Spawner : MonoBehaviour
             float timeBetweenSpawns = Mathf.Lerp(minMaxTimeBetweenSpawns.y, minMaxTimeBetweenSpawns.x, Difficulty.GetDifficulty());
             
             nextSpawnTime = Time.time + timeBetweenSpawns;
-            float blockSize = Random.Range(minMaxSize.x, minMaxSize.y);
-            spawnPosition = new Vector2(Random.Range(-screenWidth.x, screenWidth.x), screenWidth.y + blockSize/2f);
+            float asteroidSize = Random.Range(minMaxSize.x, minMaxSize.y);
+            spawnPosition = new Vector2(Random.Range(-screenWidth.x, screenWidth.x), screenWidth.y + asteroidSize/2f);
             float spawnAngle = Random.Range(-maxSpawnAngle, maxSpawnAngle);
 
             
 
             //Create a new GameObject below if there's some problem.
-            fallingBlock = (GameObject)Instantiate(fallingBlock, spawnPosition, Quaternion.Euler(Vector3.forward * spawnAngle));
-            fallingBlock.transform.localScale = Vector3.one * blockSize;
+            asteroid = (GameObject)Instantiate(asteroid, spawnPosition, Quaternion.Euler(Vector3.forward * spawnAngle));
+            asteroid.transform.localScale = Vector3.one * asteroidSize;
 
             //For background
 
